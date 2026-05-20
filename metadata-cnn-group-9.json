@@ -1,0 +1,155 @@
+{
+  "kode_kelompok": "K09",
+  "topik_pilihan": 1,
+  "nama_topik": "Convolutional Neural Network (CNN)",
+  "judul_proyek": "Klasifikasi Motif Batik Indonesia Menggunakan Convolutional Neural Network (CNN)",
+  "abstrak_singkat": "Proyek ini bertujuan mengimplementasikan model Convolutional Neural Network (CNN) untuk klasifikasi 20 kelas motif batik Indonesia. Saat ini, progres pengerjaan mencakup tahapan awal pipeline data: pengunduhan dataset publik dari Kaggle (983 citra), Exploratory Data Analysis (EDA), pra-pemrosesan citra (resize ke 224x224 piksel, konversi warna RGB, dan normalisasi rentang 0-1), serta augmentasi dan pembagian dataset. Proyek ini dikembangkan menggunakan framework TensorFlow/Keras dalam lingkungan komputasi Google Colab.",
+  "metode_ai": [
+    {
+      "nama": "Convolutional Neural Network (CNN)",
+      "peran": "utama",
+      "varian": "CNN image classifier untuk klasifikasi motif batik Indonesia dengan input citra 224x224x3.",
+      "catatan": "Model utama menerima citra batik yang telah dibaca dari direktori dataset, dikonversi ke RGB 3-channel, di-resize ke 224x224 piksel, dan dinormalisasi dengan pembagian 255.0 agar nilai piksel berada pada rentang [0, 1]."
+    }
+  ],
+  "frameworks": [
+    {
+      "nama": "TensorFlow/Keras",
+      "versi": "runtime Colab",
+      "kegunaan": "Membangun dan melatih model CNN untuk klasifikasi motif batik."
+    },
+    {
+      "nama": "Pillow",
+      "versi": "runtime Colab",
+      "kegunaan": "Membaca file citra, memperbaiki orientasi EXIF, mengonversi citra ke RGB 3-channel, dan melakukan resize ke 224x224 piksel."
+    },
+    {
+      "nama": "NumPy",
+      "versi": "runtime Colab",
+      "kegunaan": "Mengubah citra menjadi array numerik dan menormalisasi nilai piksel ke rentang [0, 1]."
+    },
+    {
+      "nama": "scikit-learn",
+      "versi": "runtime Colab",
+      "kegunaan": "Melakukan encoding label kelas motif batik menjadi label numerik."
+    },
+    {
+      "nama": "Matplotlib",
+      "versi": "runtime Colab",
+      "kegunaan": "Membuat visualisasi distribusi dataset dan contoh hasil preprocessing citra."
+    }
+  ],
+  "datasets": [
+    {
+      "nama": "Indonesian Batik Motifs Dataset",
+      "tipe": "publik",
+      "sumber": "Kaggle",
+      "url_sumber_publik": "https://www.kaggle.com/datasets/dionisiusdh/indonesian-batik-motifs",
+      "jumlah_sampel": 983,
+      "jumlah_kelas": 20,
+      "proses_akuisisi_mandiri": "",
+      "peran_di_proyek": "Dataset utama yang digunakan untuk melatih, memvalidasi, dan menguji model klasifikasi CNN.",
+      "spek_rl": null
+    }
+  ],
+  "metrik_utama": ["accuracy", "loss", "val_accuracy", "val_loss"],
+  "klaim_bonus": [],
+  "anggota": [
+    {
+      "nama": "Putri Kiara Salsabila Arief",
+      "npm": "2306250743",
+      "peran_utama": "Project Coordinator & Data Analyst",
+      "focus_area": ["Project Management", "Exploratory Data Analysis (EDA)"],
+      "konsep_dikuasai_implementasi": [
+        "Visualisasi Distribusi Data",
+        "Kaggle API Integration"
+      ],
+      "konsep_dikuasai_teori": [
+        "Class Imbalance",
+        "Analisis Statistik Data Citra"
+      ],
+      "bagian_laporan": [
+        "Ringkasan Eksekutif",
+        "Bab 1: Pendahuluan & Definisi Masalah"
+      ],
+      "bagian_kode": ["Setup Dataset", "EDA Script"]
+    },
+    {
+      "nama": "Neyla Shakira",
+      "npm": "2306250655",
+      "peran_utama": "Data Preprocessing Engineer",
+      "focus_area": ["Image Processing", "Data Cleaning"],
+      "konsep_dikuasai_implementasi": [
+        "Image Resizing",
+        "RGB Conversion",
+        "Pixel Normalization"
+      ],
+      "konsep_dikuasai_teori": [
+        "Format Representasi Citra",
+        "Pentingnya Normalisasi pada Deep Learning"
+      ],
+      "bagian_laporan": [
+        "Bab 2.1: Studi Literatur",
+        "Bab 2.2: Arsitektur Model (Sementara)"
+      ],
+      "bagian_kode": [
+        "Fungsi Ekstraksi Direktori",
+        "Script Resizing & Normalisasi"
+      ]
+    },
+    {
+      "nama": "Vanesa Kayla Zahra",
+      "npm": "2306161901",
+      "peran_utama": "Data Pipeline Engineer",
+      "focus_area": ["Data Augmentation", "Data Splitting"],
+      "konsep_dikuasai_implementasi": [
+        "Stratified Train-Test Split",
+        "Image Data Generator"
+      ],
+      "konsep_dikuasai_teori": [
+        "Teknik Mencegah Overfitting",
+        "Generalisasi Data Latih"
+      ],
+      "bagian_laporan": [
+        "Bab 3.1: Ringkasan Status",
+        "Bab 3.2: Dataset & Pra-pemrosesan"
+      ],
+      "bagian_kode": [
+        "Pembuatan subset Train, Val, dan Test (70/15/15)",
+        "Data Augmentation"
+      ]
+    },
+    {
+      "nama": "Kharisma Aprilia",
+      "npm": "2306223244",
+      "peran_utama": "Deep Learning Engineer",
+      "focus_area": ["Model Architecture", "Training Pipeline"],
+      "konsep_dikuasai_implementasi": [
+        "TensorFlow/Keras Sequential API",
+        "Callback Early Stopping"
+      ],
+      "konsep_dikuasai_teori": [
+        "Ekstraksi Fitur Konvolusi",
+        "Loss Function (Sparse Categorical Crossentropy)"
+      ],
+      "bagian_laporan": [
+        "Bab 2.3: Justifikasi Pendekatan",
+        "Bab 3.3: Implementasi Model",
+        "Bab 3.4: Hasil Eksperimen"
+      ],
+      "bagian_kode": ["Arsitektur CNN Awal", "Skrip Training & Kompilasi Model"]
+    }
+  ],
+  "tautan": {
+    "github": "https://github.com/kiarasarief/ai-final-project-group9",
+    "colab": "https://colab.research.google.com/drive/1bpHfBpFrUmD1p4LE5Z1TC3h_JGxrOgca?usp=sharing",
+    "dataset_mandiri": null,
+    "video_demo": null
+  },
+  "ai_assistant_usage": {
+    "digunakan": true,
+    "tools": ["Gemini"],
+    "estimasi_persentase": 20,
+    "catatan": "Bantuan AI (estimasi 20%) untuk memperbaiki tata bahasa pada penulisan laporan LaTeX, menyusun format file metadata JSON, Core logic algoritma model (bukan code keseluruhan) dan mengklarifikasi konsep dasar pra-pemrosesan citra."
+  }
+}
