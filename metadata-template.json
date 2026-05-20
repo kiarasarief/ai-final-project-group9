@@ -1,0 +1,107 @@
+{
+  "kode_kelompok": "K00",
+  "topik_pilihan": 0,
+  "nama_topik": "",
+  "judul_proyek": "",
+  "abstrak_singkat": "",
+
+"metode_ai": [
+  {
+    "nama": "Convolutional Neural Network (CNN)",
+    "peran": "utama",
+    "varian": "CNN image classifier untuk klasifikasi motif batik Indonesia dengan input citra 224x224x3.",
+    "catatan": "Model utama menerima citra batik yang telah dibaca dari direktori dataset, dikonversi ke RGB 3-channel, di-resize ke 224x224 piksel, dan dinormalisasi dengan pembagian 255.0 agar nilai piksel berada pada rentang [0, 1]."
+  }
+],
+"frameworks": [
+  {
+    "nama": "TensorFlow/Keras",
+    "versi": "runtime Colab",
+    "kegunaan": "Membangun dan melatih model CNN untuk klasifikasi motif batik."
+  },
+  {
+    "nama": "Pillow",
+    "versi": "runtime Colab",
+    "kegunaan": "Membaca file citra, memperbaiki orientasi EXIF, mengonversi citra ke RGB 3-channel, dan melakukan resize ke 224x224 piksel."
+  },
+  {
+    "nama": "NumPy",
+    "versi": "runtime Colab",
+    "kegunaan": "Mengubah citra menjadi array numerik dan menormalisasi nilai piksel ke rentang [0, 1]."
+  },
+  {
+    "nama": "scikit-learn",
+    "versi": "runtime Colab",
+    "kegunaan": "Melakukan encoding label kelas motif batik menjadi label numerik."
+  },
+  {
+    "nama": "Matplotlib",
+    "versi": "runtime Colab",
+    "kegunaan": "Membuat visualisasi distribusi dataset dan contoh hasil preprocessing citra."
+  }
+],
+
+  "datasets": [
+    {
+      "nama": "",
+      "tipe": "publik",
+      "sumber": "",
+      "url_sumber_publik": "",
+      "jumlah_sampel": 0,
+      "jumlah_kelas": 0,
+      "proses_akuisisi_mandiri": "",
+      "peran_di_proyek": "",
+      "spek_rl": null
+    }
+  ],
+
+  "metrik_utama": [],
+  "klaim_bonus": [],
+
+  "anggota": [
+    {
+      "nama": "",
+      "npm": "",
+      "peran_utama": "",
+      "focus_area": [],
+      "konsep_dikuasai_implementasi": [],
+      "konsep_dikuasai_teori": [],
+      "bagian_laporan": [],
+      "bagian_kode": []
+    },
+    {
+      "nama": "",
+      "npm": "",
+      "peran_utama": "",
+      "focus_area": [],
+      "konsep_dikuasai_implementasi": [],
+      "konsep_dikuasai_teori": [],
+      "bagian_laporan": [],
+      "bagian_kode": []
+    },
+    {
+      "nama": "",
+      "npm": "",
+      "peran_utama": "",
+      "focus_area": [],
+      "konsep_dikuasai_implementasi": [],
+      "konsep_dikuasai_teori": [],
+      "bagian_laporan": [],
+      "bagian_kode": []
+    }
+  ],
+
+  "tautan": {
+    "github": "",
+    "colab": "",
+    "dataset_mandiri": null,
+    "video_demo": null
+  },
+
+  "ai_assistant_usage": {
+    "digunakan": false,
+    "tools": [],
+    "bagian": [],
+    "estimasi_persentase": 0
+  }
+}
